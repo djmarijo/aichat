@@ -82,6 +82,7 @@ const handleSubmit = async (e) => {
   const response = await fetch('https://codex-aichat.onrender.com/', {
     method: 'POST',
     headers: {
+      'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
       'Content-Type' : 'application/json'
     },
     body: JSON.stringify({
