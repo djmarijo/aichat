@@ -78,7 +78,7 @@ const handleSubmit = async (e) => {
 
   loader(messageDiv);
 
-  // fetch data from server -> bot's response lokalno http://localhost:5000  
+  // fetch data from server -> bot's response locale http://localhost:5000  
   const response = await fetch('https://codex-aichat.onrender.com/', {
     method: 'POST',
     headers: {
