@@ -6,6 +6,7 @@ const chatContainer = document.querySelector('#chat_container');
 
 let loadInterval;
 
+// bot three dots
 function loader(element){
   element.textContent = '';
 
@@ -17,6 +18,7 @@ function loader(element){
   }, 300)
 }
 
+// bot answer tempo
 function typeText(element, text) {
   let index = 0;
 
@@ -81,8 +83,7 @@ const handleSubmit = async (e) => {
   // fetch data from server -> bot's response locale http://localhost:5000  
   const response = await fetch('https://codex-aichat.onrender.com/', {
     method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
+    headers: {     
       'Content-Type' : 'application/json'
     },
     body: JSON.stringify({
